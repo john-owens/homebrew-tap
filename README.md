@@ -11,3 +11,7 @@ kiac version && kiac doctor
 
 Update: `brew update && brew upgrade --cask john-owens/tap/kiac`.
 Back to upstream: `brew uninstall --cask john-owens/tap/kiac && brew install --cask saiyam1814/tap/kiac`.
+
+## Publishing a new build
+
+`scripts/release.sh 0.9.1-jo.2 feat/rosetta-nodes` (needs go, a logged-in gh, and a kiac checkout at `../kiac` or `$KIAC_DIR`). It builds darwin/arm64 the same way upstream does, publishes a pre-release on john-owens/kiac, verifies the uploaded hash, and bumps the cask.
